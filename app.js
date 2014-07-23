@@ -11,6 +11,15 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.post('/formsubmit', function(req, res) {
+	var postedData = req.body;
+	res.redirect('/success');
+});
+
+app.get('/success', function(req, res) {
+	res.send('<h1>Success!</h1>');
+});
+
 var server = app.listen(8611, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });

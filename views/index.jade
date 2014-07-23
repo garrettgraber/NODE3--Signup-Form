@@ -1,4 +1,8 @@
 extends layout
 
 block content
-	h1 Hello Boulder!
+	h1 Enter Information
+	form(method="post", action="/formsubmit")
+		input(name="username", type="text", placeholder="Username")
+		input(name="email", type="text", placeholder="Email")
+		input(type="submit")
